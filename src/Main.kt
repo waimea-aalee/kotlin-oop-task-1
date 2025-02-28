@@ -58,27 +58,27 @@ fun main() {
 
     // Poking some gnomes
 
-    jim.poke(1)                     // Should still be calm
+    jim.poke(1)                      // Should still be calm
     println(jim.info())
     check(jim.angerLevel == 2)
     check(jim.anger() == "calm")
 
-    jim.poke(1)                     // Should now be annoyed
+    jim.poke(1)                      // Should now be annoyed
     println(jim.info())
     check(jim.angerLevel == 3)
     check(jim.anger() == "annoyed")
 
-    jim.poke(10)                    // Should now be max anger
+    jim.poke(10)                     // Should now be max anger
     println(jim.info())
     check(jim.angerLevel == 10)
     check(jim.anger() == "apoplectic")
 
-    sam.poke(5)                     // Should now angry
+    sam.poke(5)                      // Should now angry
     println(sam.info())
     check(sam.angerLevel == 6)
     check(sam.anger() == "angry")
 
-    amy.poke(7)                     // Should now furious
+    amy.poke(7)                      // Should now furious
     println(amy.info())
     check(amy.angerLevel == 8)
     check(amy.anger() == "furious")
@@ -88,22 +88,22 @@ fun main() {
 
     // Patting the gnomes to calm them
 
-    jim.pat(9)                      // Should now be calm
+    jim.pat(9)                       // Should now be calm
     println(jim.info())
     check(jim.angerLevel == 1)
     check(jim.anger() == "calm")
 
-    sam.pat(9)                      // Should now be calm
+    sam.pat(9)                       // Should now be calm
     println(sam.info())
     check(sam.angerLevel == 1)
     check(sam.anger() == "calm")
 
-    amy.pat(10)                     // Too many pats!
+    amy.pat(10)                      // Too many pats!
     println(amy.info())
     check(amy.angerLevel == 10)
     check(amy.anger() == "apoplectic")
 
-    amy.pat(9)                      // And calm again
+    amy.pat(9)                       // And calm again
     println(amy.info())
     check(amy.angerLevel == 1)
     check(amy.anger() == "calm")
@@ -156,8 +156,8 @@ class Gnome(val name: String, var activity: String) {
 *            return "calm"
 *        }
 *        else if() {
-*        return ""
-*      }
+*        return " "
+*       }
 */
 
     /**
@@ -168,7 +168,7 @@ class Gnome(val name: String, var activity: String) {
     fun poke(numPokes: Int) {
         println("$name gets poked $numPokes times...")
 
-
+        
     }
 
     /**
