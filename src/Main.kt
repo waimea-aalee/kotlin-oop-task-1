@@ -22,7 +22,7 @@
 
 fun main() {
     println("Gnomes")
-    println("------------------------")
+    println("----------------------------")
 
     // Creating gnomes
 
@@ -30,7 +30,7 @@ fun main() {
     val sam = Gnome("Sam", "digging")
     val amy = Gnome("Amy", "sitting")
 
-    println("------------------------")
+    println("----------------------------")
 
     // Checking gnome anger
 
@@ -42,7 +42,7 @@ fun main() {
     check(sam.anger() == "calm")
     check(amy.anger() == "calm")
 
-    println("------------------------")
+    println("----------------------------")
 
     // Showing gnome info
 
@@ -54,7 +54,7 @@ fun main() {
     check(sam.info() == "Sam is digging and is calm")
     check(amy.info() == "Amy is sitting and is calm")
 
-    println("------------------------")
+    println("----------------------------")
 
     // Poking some gnomes
 
@@ -84,7 +84,7 @@ fun main() {
     check(amy.anger() == "furious")
 
 
-    println("------------------------")
+    println("----------------------------")
 
     // Patting the gnomes to calm them
 
@@ -130,7 +130,7 @@ class Gnome(val name: String, var activity: String) {
      *  NAME is ACTIVITY and is ANGER WORD
      */
     fun info(): String {
-        return "$name is $activity and is $angerLevel"
+        return "$name is $activity and is ${ anger() }"
     }
 
     /**
@@ -156,7 +156,6 @@ class Gnome(val name: String, var activity: String) {
 *            return "calm"
 *        }
 *        else if() {
-*
 *        return ""
 *      }
 */
@@ -168,7 +167,7 @@ class Gnome(val name: String, var activity: String) {
      */
     fun poke(numPokes: Int) {
         println("$name gets poked $numPokes times...")
-        
+
 
     }
 
