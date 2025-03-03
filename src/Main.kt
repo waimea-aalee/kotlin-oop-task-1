@@ -167,8 +167,8 @@ class Gnome(val name: String, var activity: String) {
      */
     fun poke(numPokes: Int) {
         println("$name gets poked $numPokes times...")
-
         
+
     }
 
     /**
